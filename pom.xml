@@ -12,13 +12,12 @@
     </properties>
     
     <scm>
-        <connection>scm:git:https://github.com/Molez/buildNumberTest.git</connection>
-        <developerConnection>scm:git:https://github.com/Molez/buildNumberTest.git</developerConnection>
+        <connection>scm:git:git://github.com/Molez/buildNumberTest.git</connection>
     </scm>
     
     <build>
         <plugins>
-            <plugin>
+            <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.4</version>
@@ -29,11 +28,11 @@
                         </manifest>
                     </archive>
                 </configuration>
-            </plugin>
+            </plugin>-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>buildnumber-maven-plugin</artifactId>
-                <version>1.3</version>
+                <version>1.1</version>
                 <executions>
                     <execution>
                         <phase>validate</phase>
@@ -42,13 +41,13 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
+                <!--<configuration>
                     <doCheck>false</doCheck>
                     <doUpdate>false</doUpdate>
                     <useLastCommittedRevision>true</useLastCommittedRevision>
                     <revisionOnScmFailure>FailedSCM</revisionOnScmFailure>
                     <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
-                </configuration>
+                </configuration>-->
             </plugin>
         </plugins>
     </build>
